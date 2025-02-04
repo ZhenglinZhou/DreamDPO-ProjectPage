@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bulma css template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <title>
+    DreamDPO
+  </title>
+  <!-- <link rel="icon" href="icon.ico"> -->
+</head>
+<body>
+  <section class="section">
+
+  <div class="container has-text-centered">
+    <!-- paper title -->
+    <p class="title is-2"> DreamDPO: Aligning Text-to-3D Generation with Human Preferences <br> via Direct Preference Optimization </p><br>
+    <!-- publication -->
+    <p class="subtitle is-4"> Preprint 2025 </p>
+    <!-- authors -->
+    <p class="title is-5 mt-2">
+      <a href="https://scholar.google.com/citations?user=6v7tOfEAAAAJ" target="_blank">Zhenglin Zhou<sup>1</sup></a>,
+      <a href="https://xiaoboxia.github.io/" target="_blank">Xiaobo Xia<sup>2&#8224</sup></a>,
+      <a href="https://flowerfan.site/" target="_blank">Fan Ma<sup>3</sup></a>,
+      <a href="https://hehefan.github.io/" target="_blank">Hehe Fan<sup>1</sup></a>,
+      <a href="https://scholar.google.com/citations?user=RMSuNFwAAAAJ" target="_blank">Yi Yang<sup>1&#8224</sup></a>,
+      <a href="https://www.chuatatseng.com/" target="_blank">Tat-Seng Chua<sup>2</sup></a>
+    </p>
+    <!-- affiliations -->
+    <p class="subtitle is-5">
+      <sup>1</sup> Zhejiang University, </span> <sup>2</sup> National University of Singapore, </span> <sup>3</sup> Yale University
+    </p>
+
+    <!-- other links -->
+    <div class="is-flex is-justify-content-center">
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Paper </span>  </a>
+      </span>
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="https://github.com/ZhenglinZhou/DreamDPO" role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a>
+      </span>
+    </div><br>
+
+  </div>
+
+
+  <!-- main container -->
+  <div class="container is-max-desktop has-text-centered">
+
+    <!-- results (videos) -->
+    <p class="title is-3 mt-5 has-text-centered"> Video </p>
+    <video muted autoplay controls loop> <source src="videos/demo-low.mp4" type="video/mp4"> </video><br>
+
+    <p class="title is-3 mt-5 has-text-centered"> Method Overview </p>
+    <img src="images/overview.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
+
+    <p align="left">
+      Framework of DraemDPO.
+      DreamDPO first constructs pairwise examples, then compares their alignment with human preferences using reward or large multimodal models, and lastly optimizes the 3D presentation with a preference-driven loss function.
+      The loss function pulls the win example closer and pushes the lose example away.
+    </p>
+
+    <p class="title is-3 mt-5 has-text-centered"> DreamDPO with Reward Model </p>
+
+     <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/108.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/82.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/3.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/13.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/20.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/36.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/55.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/70.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/a_bunch_of_colorful_marbles_spilling_out_of_a_red_velvet_bag.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/88.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/a_ceramic_upside_down_yellow_octopus_holding_a_blue_green_ceramic_cup.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/a_DSLR_photo_of_a_basil_plant.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/a_DSLR_photo_of_a_cat_magician_making_a_white_dove_appear.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/a_DSLR_photo_of_a_humanoid_robot_using_a_laptop.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/A_DSLR_photo_of_a_knight_chopping%20wood.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/reward/a_DSLR_photo_of_an_unstable_rock_cairn_in_the_middle_of_a_stream.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="title is-3 mt-5 has-text-centered"> DreamDPO with Large Multi-modal Model </p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/lmm/a_pair_of_hiking_boots.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/lmm/a_shouting_leaf.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/lmm/Four_ripe_apples_in_a_basket.mp4" type="video/mp4">
+            </video>
+            <p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="videos/lmm/a_dancing_elephant.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--citation-->
+    <div class="card mt-4">
+      <header class="card-header">
+        <p class="card-header-title"> Citation </p>
+      </header>
+      <div class="card-content is-size-5 has-text-left">
+<pre><code>
+@article{zhou2025dreamdpo,
+  title={DreamDPO: Aligning Text-to-3D Generation with Human Preferences via Direct Preference Optimization},
+  author={Zhou, Zhenglin and Xia, Xiaobo and Ma, Fan and Fan, Hehe and Yang, Yi and Chua Tat-Seng},
+  journal={arXiv},
+  year={2025}
+}
+</code></pre>
+      </div>
+    </div>
+
+  </div>
+  </section>
+</body>
+</html>
